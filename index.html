@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Meridian Clinic · Front desk</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@500;700&family=Instrument+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="top">
+  <h1>Meridian Clinic</h1>
+  <button id="tryCall" class="primary">Try call</button>
+</header>
+
+<main class="board">
+  <section aria-labelledby="h-doc">
+    <h2 id="h-doc">Doctors</h2>
+    <div id="doctors" class="doctors"></div>
+  </section>
+  <section aria-labelledby="h-app">
+    <h2 id="h-app">Appointments</h2>
+    <div id="appts" class="appts"></div>
+  </section>
+</main>
+
+<aside id="phone" class="phone" hidden aria-label="Call">
+  <div class="screen">
+    <div class="who">
+      <div class="avatar">A</div>
+      <div><b>Aria</b><span id="status">Calling…</span></div>
+      <time id="timer">00:00</time>
+    </div>
+    <canvas id="wave" width="560" height="120"></canvas>
+    <div id="log" class="log" aria-live="polite"></div>
+    <div id="card" class="card" hidden></div>
+    <div class="controls">
+      <button id="mute" class="round" aria-label="Mute" aria-pressed="false">
+        <svg viewBox="0 0 24 24"><path d="M12 15a3 3 0 0 0 3-3V6a3 3 0 0 0-6 0v6a3 3 0 0 0 3 3Zm5-3a5 5 0 0 1-10 0H5a7 7 0 0 0 6 6.9V22h2v-3.1A7 7 0 0 0 19 12h-2Z"/></svg>
+      </button>
+      <button id="end" class="round end" aria-label="End call">
+        <svg viewBox="0 0 24 24"><path d="M12 9c-3.3 0-6.4 1-8.6 2.8-.5.5-.5 1.200 0 1.700l1.400 1.400c.4.400 1 .5 1.500.200l2-1.300c.3-.2.500-.5.500-.9V11.500c1.600-.5 3.400-.5 5.600 0v.4c0 .4.200.7.500.9l2 1.300c.5.300 1.100.2 1.500-.2l1.400-1.400c.5-.5.500-1.200 0-1.700C18.400 10 15.300 9 12 9Z"/></svg>
+      </button>
+    </div>
+  </div>
+</aside>
+<script src="app.js"></script>
+</body>
+</html>
